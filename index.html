@@ -2,12 +2,47 @@
 <html>
 
 <head>
-    <!-- TODO: Include Font Awesome file here -->
-    <!-- TODO: Include Google Fonts file here -->
+    <meta charset="utf-8" />
+    <title>ScriBBler</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- Font Awesome file here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Google Fonts file here -->
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 
-<body>
-    <!-- TODO: Include all your code for the header and home page here -->
+<body onload="insert_components();insert_post_modal()">
+<!-- Include all your code for the header and home page here -->
+<div id="header-space" class='container header-container'></div>
+
+<!-- Modals-->
+
+<div id="modal-signup" class="modal"></div>
+<div id="modal-signin" class="modal"></div>
+
+<!-- create post modal -->
+<div id="modal-create-post" class="modal"></div>
+
+<!-- home page content -->
+<div class="post-buttons">
+    <button type="button" class="btn btn-primary button-class post-button"
+            onclick="window.location.href='html/postslist.html'">All Posts
+    </button>
+    <button type="button" class="btn btn-primary button-class post-button"
+            onclick="modal_dialog('modal-create-post','block')">Create Post
+    </button>
+</div>
+
+<script src="./scripts/common.js"></script>
+<script src="./scripts/index.js" ></script>
 </body>
 
 </html>
