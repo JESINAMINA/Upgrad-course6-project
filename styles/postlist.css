@@ -1,0 +1,109 @@
+body {
+    background-color: #ffeedd;
+    background-size: 100% 100%;
+}
+
+.card-class {
+    display: inline-flex;
+    background-color: white;
+    border-radius: 20px;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgb(185, 183, 183);
+    margin: 15px;
+    padding-left: 10px;
+}
+
+.post-author {
+    display: -webkit-box;
+    width: auto;
+    max-width: 80px;
+    font-weight: bold;
+    color: gray;
+    display: inline-flex;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.post-content {
+    background: #dee2e6;
+    border-radius: 0 20px 20px 0;
+    width: auto;
+    max-width: 600px;
+    padding: 10px;
+}
+.post-content-p {
+    color: black;
+    display: inline-flex;
+    width: 100%;
+    text-align: left;
+}
+
+.post-title-header {
+    color: gray;
+    display: inline-flex;
+    width: 100%;
+}
+.post-title-p {
+    display: inline-flex;
+    color: gray;
+    font-weight: 500;
+    white-space: nowrap;
+    width: 100%;
+}
+.card-ellipsis {
+    text-align: end;
+    padding-right: 20px;
+}
+
+.confirm-dialog {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 15px 15px 15px 15px;
+    text-align: center;
+    margin: 0;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 350px;
+    height: 100px;
+}
+
+.class-yes-btn {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: auto auto;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100px;
+    height: 35px;
+    margin-top: 15px;
+    margin-right: 40px;
+    margin-left: 10px;
+}
+.class-no-btn {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: auto auto;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100px;
+    height: 35px;
+    margin-top: 15px;
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+.post-board-class {
+    display: flex-wrap;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
