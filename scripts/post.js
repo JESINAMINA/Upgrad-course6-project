@@ -40,7 +40,7 @@ document.addEventListener(
         } else if (hasClass(e.target, "like-button") || hasClass(e.target, "fa-thumbs-up") ) {
             // Like Button Clicked
             likeCount++;
-            document.getElementsByClassName("like-button").innerHTML = '<i class="fa fa-thumbs-up"></i> Liked';
+            document.getElementById("like").innerHTML =  '<i class="fa fa-thumbs-up"></i> Liked';
             if (likeCount == 1) {
                 document.getElementById("likeText").innerHTML = "1 person likes this!";
             } else if (likeCount > 1) {
