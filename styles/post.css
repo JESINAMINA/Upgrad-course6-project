@@ -1,0 +1,72 @@
+.post-page {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.post-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.post-author {
+    font-family: fantasy;
+    font-size: x-large;
+}
+
+.save-edit-button {
+    background-color: red;
+    color: white;
+    margin: 10px 0 10px 0px;
+    padding: 3px 10px 3px 10px;
+}
+
+.author-edit-button-area {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 10px 0px;
+}
+
+.like-comment {
+    background-color: red;
+    color: white;
+    margin: 0px 0 10px 0px;
+    padding: 3px 10px 3px 10px;
+}
+
+.post-content {
+    display: flex;
+    text-align: justify;
+    margin: 10px 0 10px 0px;
+}
+
+.like-summary {
+    color: black;
+}
+
+.comment-area {
+    display: block;
+    width: 70%;
+    height: 70px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 0;
+    margin: 10px 0 10px 0px;
+}
+.comments-display-area {
+    background-color: white;
+    border: 10px solid lightgray;
+    margin: 10px 0 10px 0px;
+    width: 80%;
+}
+
+.comment {
+    background-color: white;
+    padding: 10px 10px 10px 10px;
+    border-top: 5px solid lightgray;
+    border-bottom: 5px solid lightgray;
+}
+
+#save-button {
+    display: none;
+}
