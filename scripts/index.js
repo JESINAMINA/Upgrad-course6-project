@@ -1,10 +1,9 @@
 var createPostModal = document.getElementById("createPostModal");
 
-// Get the button that opens the modal
+var closeCreatePost = document.getElementById("closeCreatePost");
 var createPostBtn = document.getElementById("createPostBtn");
 
-// Get the <span> element that closes the modal
-var closeCreatePost = document.getElementById("closeCreatePost");
+//Opening and closing create post modal dialogue on click of cerate and close button respectively
 
 createPostBtn.addEventListener("click", () => openModal(createPostModal));
 closeCreatePost.addEventListener("click", () => closeModal(createPostModal));

@@ -1,17 +1,13 @@
+var confirmDelete = document.getElementById("confirmDelete");
 var deletePostModal = document.getElementById("deletePostModal");
 var cancelDelete = document.getElementById("cancelDelete");
-var confirmDelete = document.getElementById("confirmDelete");
 
-// Get the button that opens the modal
-var deleteIcons = document.querySelectorAll(".delete-icon");
-var deleteIconsArray = Array.from(deleteIcons);
-
-// Get the dot icons
 var dots = document.querySelectorAll(".dots");
 var dotsArray = Array.from(dots);
 
-// Get the No button that closes the modal
-// var closeDeletePostModal = document.getElementById("closeDeletePostModal");
+var deleteIcons = document.querySelectorAll(".delete-icon");
+var deleteIconsArray = Array.from(deleteIcons);
+
 var selectedPost;
 openDeletePostModal = (deletePostModal, clickedIcon) => {
     selectedPost = "";
@@ -19,12 +15,13 @@ openDeletePostModal = (deletePostModal, clickedIcon) => {
     selectedPost = clickedIcon.closest(".post");
 };
 
+//function to delete a post
 deletePost = () => {
     selectedPost.remove();
     closeModal(deletePostModal);
 };
 
-// Updating Session storage before redirecting to post.html page to view the clicked post
+// Saving the clicked post to the session storage so that it can be accessed after navigating to the edit page
 navigateToPost = postThread => {
     var post = postThread.closest(".post");
     var author = post.querySelector(".username p").textContent.trim();
@@ -35,7 +32,7 @@ navigateToPost = postThread => {
     sessionStorage.setItem("postContent", postContent);
     window.location.href = "../html/post.html";
 };
-// Event Listeners
+// Define all event Listeners
 deleteIconsArray.map(deleteIcon => {
     deleteIcon.addEventListener("click", e =>
         openDeletePostModal(deletePostModal, e.target)

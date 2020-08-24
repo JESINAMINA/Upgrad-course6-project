@@ -1,6 +1,15 @@
 body {
     background-color: #ffeedd;
 }
+#deletePostModal .button-wrapper button {
+    padding: 5px 20px;
+    border-radius: 0;
+}
+#deletePostModal .button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
 .posts-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -59,12 +68,5 @@ body {
     width: 24%;
     margin: 15% auto;
 }
-#deletePostModal .button-wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-}
-#deletePostModal .button-wrapper button {
-    padding: 5px 20px;
-    border-radius: 0;
-}
+
+
