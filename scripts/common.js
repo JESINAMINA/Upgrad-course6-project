@@ -1,76 +1,44 @@
+// Get the modal
+var signUpModal = document.getElementById("signUpModal");
+var signInModal = document.getElementById("signInModal");
 
-function insert_components() {
-    insert_header();
-    insert_modal();
-}
+// Get the button that opens the modal
+var signUpBtn = document.getElementById("signUpBtn");
+var signInBtn = document.getElementById("signInBtn");
+var signUpLink = document.getElementById("signUpLink");
 
-function insert_header() {
-    document.getElementById('header-space').innerHTML = header;
-}
+// Get the <span> element that closes the modal
+var closeSignUp = document.getElementById("closeSignUp");
+var closeSignIn = document.getElementById("closeSignIn");
 
-function insert_modal() {
-    document.getElementById('modal-signup').innerHTML = signup_modal;
-    document.getElementById('modal-signin').innerHTML = signin_modal;
-}
+// When the user clicks on the button, open the modal
+signInBtn.addEventListener("click", () => openModal(signInModal));
+signUpBtn.addEventListener("click", () => openModal(signUpModal));
 
-function modal_dialog(id, display) {
-    document.getElementById(id).style.display = display;
-}
+// When the user clicks on <span> (x), close the modal
+closeSignUp.addEventListener("click", () => closeModal(signUpModal));
+closeSignIn.addEventListener("click", () => closeModal(signInModal));
 
-const header =
-    "<div class='col-xs-6 header-logo-col'> \
-        <div class='row'> \
-            <h1 class='header-text' >ScriBBler</h1> \
-        </div> \
-        <div class='row'> \
-            <div class='header-subtext'>Explore, Imagine, Create</div> \
-        </div> \
-    </div> \
-    <div class='col-xs-6 header-button-col'> \
-        <button type='button' class='btn btn-primary button-class header-button' onclick=\"modal_dialog('modal-signup','block')\">Sign Up</button> \
-        <button type='button' class='btn btn-primary button-class header-button' onclick=\"modal_dialog('modal-signin','block')\">Sign In</button> \
-    </div>";
-
-const signup_modal =
-    "<form id='signup-modal-content' class='modal-content' action=''> \
-        <div class='modal-container'> \
-            <div class='modal-title'>Get Started</div> \
-            <span onclick=\"modal_dialog('modal-signup','none')\" class='close' ><i class='fa fa-times modal-close' aria-hidden='true'></i></span> \
-            <hr class='hr-class'> \
-            <label for='name'>Name</label> \
-            <input id='name' type='text' placeholder='Enter your name' name='name' required > \
-            <label for='username'>Username</label> \
-            <input type='text' placeholder='Enter your username' name='username' required> \
-            <label for='password'>Password</label> \
-            <input type='password' placeholder='Enter your password' name='password' required> \
-            <label for='confirm-password'>Confirm Password</label> \
-            <input type='password' placeholder='Re-enter your password' name='confirm-password' required> \
-            <div class='clearfix'> \
-                <button id='id_signup_btn' type='submit' class='class-signin-btn'>Sign Up</button> \
-            </div> \
-        </div> \
-    </form>";
-
-const signin_modal =
-    "<form id='signin-modal-content' class='modal-content' action=''> \
-        <div class='modal-container'> \
-            <div class='modal-title'>Welcome Back!</div> \
-            <span onclick=\"modal_dialog('modal-signin','none')\" class='close' ><i class='fa fa-times modal-close' aria-hidden='true'></i></span> \
-            <hr class='hr-class'> \
-            <label for='username'>Username</label> \
-            <input type='text' placeholder='Enter your username' name='username' required> \
-            <label for='password'>Password</label> \
-            <input type='password' placeholder='Enter your password' name='password' required> \
-            <div class='clearfix'> \
-                <button id='id_signin_btn' type='submit' class='class-signin-btn'>Sign In</button> \
-            </div> \
-            <div class='modal-suffix-msg'> \
-                <b> \
-                    Not a member? \
-                    <span id='signup-hyper-link' onclick=\"modal_dialog('modal-signin','none');modal_dialog('modal-signup','block')\"> \
-                        Sign Up \
-                    </span> \
-                </b> \
-            </div> \
-        </div> \
-    </form>";
+// Click Handlers below:
+// When the user clicks anywhere outside of the modal, close it
+window.addEventListener("click", function(event) {
+    if (event.target == signUpModal) {
+        signUpModal.style.display = "none";
+    }
+    if (event.target == signInModal) {
+        signInModal.style.display = "none";
+    }
+});
+// Open the modal Generic function
+openModal = modal => {
+    modal.style.display = "block";
+};
+// Close the modal Generic function
+closeModal = modal => {
+    modal.style.display = "none";
+};
+// On clicking sign up hyperlink inside sign in modal
+signUpLink.onclick = function() {
+    closeModal(signInModal);
+    openModal(signUpModal);
+};
